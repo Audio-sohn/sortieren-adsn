@@ -42,3 +42,19 @@ func AssertEqual(t testing.TB, expected, actual interface{}) {
 		t.Errorf("Expected %v, got %v", expected, actual)
 	}
 }
+
+// takes a list of integers and swaps positions x and y
+func SwapElements(list []int, x int, y int) {
+
+	// check if x,y in boundaries
+	if x > len(list)-1 || y > len(list)-1 {
+
+		return
+
+	}
+
+	temp1 := list[x]
+	list[x] = list[y]
+	list[y] = temp1
+
+}
